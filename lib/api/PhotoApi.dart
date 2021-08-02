@@ -7,6 +7,7 @@ class PhotoApi {
     try {
       final response = await http
           .get(Uri.parse("https://jsonplaceholder.typicode.com/photos?_limit=24"));
+      await Future.delayed(Duration(seconds: 1));
       if (response.statusCode == 200) {
         final List<dynamic> photo = json.decode(response.body);
         return photo.map((json) => Photo.fromJson(json)).toList();

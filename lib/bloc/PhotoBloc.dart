@@ -7,10 +7,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class PhotoBloc extends Bloc<PhotoEvent, PhotoState> {
   final PhotoApi photosApi;
 
-  PhotoBloc({required this.photosApi}) : super(PhotoNotGetted());
+  PhotoBloc({required this.photosApi}) : super(PhotoLoading());
 
   @override
-  PhotoState get initialState => PhotoNotGetted();
+  PhotoState get initialState => PhotoLoading();
 
   @override
   Stream<PhotoState> mapEventToState(PhotoEvent event) async* {
