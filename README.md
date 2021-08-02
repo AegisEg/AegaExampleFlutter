@@ -1,6 +1,6 @@
-# example
+# AegaExampleFlutter
 
-A new Flutter project.
+Демонстрационный проект разработанный на Flutter
 
 ## Getting Started
 
